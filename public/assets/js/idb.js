@@ -25,10 +25,10 @@ function saveRecord(record) {
   const transaction = db.transaction(['new_pizza'], 'readwrite');
 
   const pizzaObjectStore = transaction.objectStore('new_pizza');
-
+  console.log(record);
   // add record to your store with add method.
   pizzaObjectStore.add(record);
-}
+};
 
 function uploadPizza() {
   // open a transaction on your pending db
